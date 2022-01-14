@@ -45,7 +45,7 @@ function HowBadIsMyExploit()
  end
 
 function math.IcePools(age)
-  if age < 16 and age > 0 then
+  if age <= 13 and age > 0 then
     return "Good, You have identified the minor."
   elseif age < 0 then
     return "Way too minor."
@@ -58,3 +58,8 @@ function math.IcePools(age)
   print("Made by Thurau#1307 !!! nobody else made this so secure thing")
 end
 end
+
+function MoonsecDeobfuscator(script)
+   print("Deobfuscated & copied to clipboard")
+   setclipboard("buy LD for cheap deobfuscation")
+   end
