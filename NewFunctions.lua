@@ -32,3 +32,7 @@ end
 function GetLocalPlayer()
  return game.Players.LocalPlayer
 end
+
+function GetALife()
+   error("Not possible.")
+end
