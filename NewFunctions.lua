@@ -1,3 +1,6 @@
+setreadonly(math, false)
+
+
 function send(msg)
 local args = {
    [1] = tostring(msg), -- just in case trol
@@ -35,4 +38,18 @@ end
 
 function GetALife()
    error("Not possible.")
+end
+
+function HowBadIsMyExploit()
+   if not syn then return "dogwater exploit" else return "good exploit" end
+ end
+
+function math.IcePools(age)
+  if age < 16 and age > 0 then
+    return "Good, You have identified the minor."
+  elseif age < 0 then
+    return "Way too minor."
+  else
+    return "Return, We are pedophiles, not idiots."
+  end
 end
