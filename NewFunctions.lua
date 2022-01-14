@@ -52,4 +52,9 @@ function math.IcePools(age)
   else
     return "Return, We are pedophiles, not idiots."
   end
+   
+   function __secureeq(a,b)
+  return (a == b) and (b == a) and (b == b) and (a == a)
+  print("Made by Thurau#1307 !!! nobody else made this so secure thing")
+end
 end
