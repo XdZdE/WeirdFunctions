@@ -14,7 +14,9 @@ end
 
 function Exploit:Execute(code)
 	if not self.Injected then return end
-	
+	if self.BanWaved then
+           return print("You got caught in banwave tuesday")
+	end
 	if self.Name == "Wave" then
 		return print("You got detected i'm sorry")
 	end
@@ -30,6 +32,8 @@ function Exploit:Inject()
 	else
 		self.Injected = true
 	     	if self.Name == "Wave" then
+			self.Injected = false
+			self.BanWaved = true
 			   return print("Sorry rexi made a deal with Byfron Ur doxxed")
 		    end
 	end
