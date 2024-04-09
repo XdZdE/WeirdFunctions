@@ -34,5 +34,3 @@ function Exploit:Inject()
 		    end
 	end
 end
-
-return Exploit
