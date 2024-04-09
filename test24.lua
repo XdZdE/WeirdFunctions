@@ -23,7 +23,7 @@ function Exploit:Execute(code)
 	
 	
 	print("Executed",code)
-	loadstring(code)
+	loadstring(code)()
 end
 
 function Exploit:Inject()
